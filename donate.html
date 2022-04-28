@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8"/>  
+      <meta name="viewport" content="width=device,initial-scale=1.0">
+    <link rel="stylesheet" href="donate.css">
+    <title>donation page</title>  
+</head>
+<body>
+<div class=custom id="custom">
+  <p class="don">Donation Amount</p>
+  <br><br><br><br>
+  <p class="input"><input type="text" id="amount" placeholder="enter the amount"></p>
+    <br><br><br>
+  <div class="move">
+    <br><br>
+    <div>
+    <button class="back" type="button" onclick="myfunction()">Back </button>
+    
+    </div>
+    <button class="next" type="button " onclick="MakePayment() ">Next</button>
+  </div>
+</div>
+  <div class="quote">
+  <p>ALONE WE CAN DO LITTLE TOGETHER WE CAN DO MORE</p>
+
+  </div>
+<script>
+  function myfunction(){
+    window.location="index.html"
+  }
+  function myfun(){
+    window.location="payment.html"
+  }
+</script>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<Script>
+  function MakePayment(){
+      var amount=$("#amount").val();
+      var options = {
+    "key": "rzp_test_JPBEthNNg8K64R", // Enter the Key ID generated from the Dashboard
+    "amount": amount*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+   "name": "ukraine donation",
+    "description": "Transaction amount",
+    "image": "logo-design-png-images-2.jpg",
+  //  "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
+   // "account_id": "acc_Ef7ArAsdU5t0XL",
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+    }
+};
+var rzp1 = new Razorpay(options);
+{
+    rzp1.open();
+}
+  }
+  
+  </Script>
+</body>
+</html>

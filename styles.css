@@ -1,0 +1,91 @@
+body{
+    background-image: url(Ukraine.jpg);
+    background-size: cover;   
+}
+
+
+.tabs{
+    float: right;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.home{
+    height: 40px;
+    width: 85px;
+    background-color: black;
+    color: white;
+    text-shadow: black;
+    
+    
+}    
+
+.quote{
+    color:blue;
+    text-overflow: ellipsis;
+    text-shadow: rgb(247, 247, 7) 2px 2px;
+    text-align: center;
+    float: left;
+    width: 500px;
+    font-size: 80px;
+    top: 130px;
+    left: 75px;
+}
+.button{
+    width: 240px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(172, 14, 14);
+    color: rgb(10, 9, 9);
+    box-shadow: rgb(64, 4, 161);
+}
+.button:hover {background-color: #17eb3e}
+.home:hover {background-color: #0da32b}
+.button:active {
+  background-color: #16e54d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.about{
+    float: right;
+        width: 250px;
+        height: 40px;
+        font-size: 40px;
+        color: rgb(10, 9, 9);
+        font-weight: bold;
+        display: block;
+        
+    }
+    .pics{
+       
+        position: absolute;
+        top:800px;
+        background-color: rgb(8, 8, 8);
+        
+    }
+    .img{
+        width: 500px;
+        height:450px;
+    }
+   
+
+
+@media only screen and (max-width: 900px) {
+    .quote{
+        font-size: 50px;
+         }
+         .button{
+            width: 200px;
+            height: 35px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgb(172, 14, 14);
+            color: rgb(10, 9, 9);
+            box-shadow: rgb(64, 4, 161);
+         }
+         .quote{
+             font-size: 50px;
+         }
+
+}
